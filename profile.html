@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | ClickCart</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        /* Add custom spacing styles */
+        #user-profile {
+            padding: 40px 0 80px 0;
+            /* Increased bottom padding to prevent footer overlap */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            /* Increased spacing between form groups */
+        }
+
+        .card {
+            margin-bottom: 30px;
+            /* Add space between cards */
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            /* Add space between input fields */
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            /* Add space above button groups */
+        }
+
+        .password-section {
+            margin-bottom: 60px;
+            /* Add extra space before footer */
+        }
+    </style>
+</head><!--/head-->
+
+<body>
+    <header id="header"><!--header-->
+        <div class="header_top"><!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle"><!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="index.html"><img src="images/home/clickcartlogo.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
+                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                                <li><a href="login.html"><i class="fa fa-lock"></i>Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <section id="user-profile">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/avatar-placeholder.png" alt="User Avatar"
+                                    class="rounded-circle img-fluid mb-4" style="width: 150px; height: 150px;">
+                                <h4 class="card-title mb-2" id="userFullName">Họ và tên</h4>
+                                <p class="text-muted mb-2" id="userRole">Vai trò người dùng</p>
+                                <p class="text-muted mb-0"><small>Thành viên từ: <span
+                                            id="createdDate">01/01/2024</span></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Thông tin cá nhân</h5>
+                                <button class="btn btn-primary btn-sm" id="editProfile">
+                                    <i class="fa fa-edit"></i> Chỉnh sửa
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <form id="profileForm">
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Tên đăng nhập</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="username" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Họ và tên</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="fullName" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Email</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="email" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Số điện thoại</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="tel" class="form-control" id="phone" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Địa chỉ</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" id="address" rows="3" disabled></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"></div>
+                                        <div class="col-sm-9">
+                                            <div class="btn-group" role="group">
+                                                <button type="submit" class="btn btn-success me-2" id="saveChanges"
+                                                    style="display: none;">
+                                                    <i class="fa fa-save"></i> Lưu thay đổi
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" id="cancelEdit"
+                                                    style="display: none;">
+                                                    <i class="fa fa-times"></i> Hủy
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card password-section">
+                            <div class="card-header">
+                                <h5 class="mb-0">Đổi mật khẩu</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="passwordForm">
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Mật khẩu hiện tại</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Mật khẩu mới</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="newPassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Xác nhận mật khẩu</h6>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-sm-3"></div>
+                                        <div class="col-sm-9">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fa fa-key"></i> Cập nhật mật khẩu
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer"><!--Footer-->
+            <div class="footer-top">
+                <div class="container">
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Dịch vụ</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Trợ giúp trực tuyến</a></li>
+                                    <li><a href="#">Liên hệ với chúng tôi</a></li>
+                                    <li><a href="#">FAQ’s</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Chính sách</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Điều khoản sử dụng</a></li>
+                                    <li><a href="#">Chính sách quyền riêng tư</a></li>
+                                    <li><a href="#">Chính sách hoàn tiền</a></li>
+                                    <li><a href="#">Hệ thống thanh toán</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="single-widget">
+                                <h2>Về ClickCart</h2>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Thông tin</a></li>
+                                    <li><a href="#">Địa chỉ cửa hàng</a></li>
+                                    <li><a href="#">Bản quyền</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-1">
+                            <div class="single-widget">
+                                <h2>Về ClickCart</h2>
+                                <form action="#" class="searchform">
+                                    <input type="text" placeholder="Địa chỉ email của bạn" />
+                                    <button type="submit" class="btn btn-default"><i
+                                            class="fa fa-arrow-circle-o-right"></i></button>
+                                    <p>Nhận thông tin cập nhật mới nhất từ
+                                        trang web của chúng tôi và tự cập nhật...</p>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                        <p class="pull-right">Designed by <span><a target="_blank"
+                                    href="http://www.themeum.com">Themeum</a></span></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer><!--/Footer-->
+
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/price-range.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            // Enable form editing
+            document.getElementById('editProfile').addEventListener('click', function () {
+                const inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
+                inputs.forEach(input => {
+                    if (input.id !== 'username') {
+                        input.disabled = false;
+                    }
+                });
+                document.getElementById('saveChanges').style.display = 'inline-block';
+                document.getElementById('cancelEdit').style.display = 'inline-block';
+                this.style.display = 'none';
+            });
+
+            // Cancel editing
+            document.getElementById('cancelEdit').addEventListener('click', function () {
+                const inputs = document.querySelectorAll('#profileForm input, #profileForm textarea');
+                inputs.forEach(input => {
+                    input.disabled = true;
+                });
+                document.getElementById('saveChanges').style.display = 'none';
+                this.style.display = 'none';
+                document.getElementById('editProfile').style.display = 'inline-block';
+            });
+        </script>
+</body>
+
+</html>
