@@ -75,6 +75,15 @@ CREATE TABLE CartItems (
     Quantity INT NOT NULL
 );
 
+CREATE TABLE Vouchers (
+    VoucherID INT PRIMARY KEY IDENTITY(1,1),
+    VoucherCode NVARCHAR(50) NOT NULL UNIQUE,
+    DiscountPercentage INT NOT NULL,
+    StartDate DATETIME NOT NULL,
+    EndDate DATETIME NOT NULL,
+    IsActive BIT NOT NULL DEFAULT 1
+);
+
 INSERT INTO Categories (CategoryName, Description)
 VALUES 
 (N'Đồ uống', N'Các loại đồ uống bao gồm nước ngọt, nước lọc, bia, rượu...'),
